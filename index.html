@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akko</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Avatar Akko.png" type="image/jpeg">
+</head>
+
+<body>
+
+    <!-- Barra Superior Rosa -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="Akko Text.png" alt="Akko" class="nav-logo"
+                onerror="this.src='https://via.placeholder.com/150x40/ff33cc/ffffff?text=Akko';">
+        </div>
+        <div class="nav-center">
+            <a href="#videos-section" class="nav-link nav-btn-videos">Últimos vídeos publicados</a>
+            <a href="#social-section" class="nav-link nav-btn-social">Redes sociales</a>
+        </div>
+        <div class="nav-right">
+            <div class="language-dropdown">
+                <span class="language-badge" id="current-lang">
+                    <img src="https://flagcdn.com/es.svg" alt="es" class="flag"> Español <i class="fas fa-chevron-down"
+                        style="margin-left: 5px; font-size: 0.8rem;"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLang('es', 'Español')"><img src="https://flagcdn.com/es.svg"
+                            class="flag"> Español</a>
+                    <a href="#" onclick="changeLang('gb', 'English')"><img src="https://flagcdn.com/gb.svg"
+                            class="flag"> English</a>
+                    <a href="#" onclick="changeLang('ct', 'Català')"><img src="Catalan Flag.svg" class="flag">
+                        Català</a>
+                    <a href="#" onclick="changeLang('Jan', 'Jan')"><img src="Jan Panda.png" class="flag"> Jan</a>
+                    <a href="#" onclick="changeLang('fr', 'Français')"><img src="https://flagcdn.com/fr.svg"
+                            class="flag"> Français</a>
+                    <a href="#" onclick="changeLang('de', 'Deutsch')"><img src="https://flagcdn.com/de.svg"
+                            class="flag"> Deutsch</a>
+                    <a href="#" onclick="changeLang('it', 'Italiano')"><img src="https://flagcdn.com/it.svg"
+                            class="flag"> Italiano</a>
+                    <a href="#" onclick="changeLang('pt', 'Português')"><img src="https://flagcdn.com/pt.svg"
+                            class="flag"> Português</a>
+                    <a href="#" onclick="changeLang('jp', '日本語')"><img src="https://flagcdn.com/jp.svg" class="flag">
+                        日本語</a>
+                    <a href="#" onclick="changeLang('kr', '한국어')"><img src="https://flagcdn.com/kr.svg" class="flag">
+                        한국어</a>
+                    <a href="#" onclick="changeLang('cn', '中文')"><img src="https://flagcdn.com/cn.svg" class="flag">
+                        中文</a>
+                    <a href="#" onclick="changeLang('ru', 'Русский')"><img src="https://flagcdn.com/ru.svg"
+                            class="flag"> Русский</a>
+                    <a href="#" onclick="changeLang('sa', 'العربية')"><img src="https://flagcdn.com/sa.svg"
+                            class="flag"> العربية</a>
+                    <a href="#" onclick="changeLang('nl', 'Nederlands')"><img src="https://flagcdn.com/nl.svg"
+                            class="flag"> Nederlands</a>
+                    <a href="#" onclick="changeLang('se', 'Svenska')"><img src="https://flagcdn.com/se.svg"
+                            class="flag"> Svenska</a>
+                    <a href="#" onclick="changeLang('no', 'Norsk')"><img src="https://flagcdn.com/no.svg" class="flag">
+                        Norsk</a>
+                    <a href="#" onclick="changeLang('dk', 'Dansk')"><img src="https://flagcdn.com/dk.svg" class="flag">
+                        Dansk</a>
+                    <a href="#" onclick="changeLang('fi', 'Suomi')"><img src="https://flagcdn.com/fi.svg" class="flag">
+                        Suomi</a>
+                    <a href="#" onclick="changeLang('pl', 'Polski')"><img src="https://flagcdn.com/pl.svg" class="flag">
+                        Polski</a>
+                    <a href="#" onclick="changeLang('cz', 'Čeština')"><img src="https://flagcdn.com/cz.svg"
+                            class="flag"> Čeština</a>
+                    <a href="#" onclick="changeLang('ro', 'Română')"><img src="https://flagcdn.com/ro.svg" class="flag">
+                        Română</a>
+                    <a href="#" onclick="changeLang('gr', 'Ελληνικά')"><img src="https://flagcdn.com/gr.svg"
+                            class="flag"> Ελληνικά</a>
+                    <a href="#" onclick="changeLang('tr', 'Türkçe')"><img src="https://flagcdn.com/tr.svg" class="flag">
+                        Türkçe</a>
+                    <a href="#" onclick="changeLang('il', 'עברית')"><img src="https://flagcdn.com/il.svg" class="flag">
+                        עברית</a>
+                    <a href="#" onclick="changeLang('in', 'हिन्दी')"><img src="https://flagcdn.com/in.svg" class="flag">
+                        हिन्दी</a>
+                    <a href="#" onclick="changeLang('th', 'ไทย')"><img src="https://flagcdn.com/th.svg" class="flag">
+                        ไทย</a>
+                    <a href="#" onclick="changeLang('vn', 'Tiếng Việt')"><img src="https://flagcdn.com/vn.svg"
+                            class="flag"> Tiếng Việt</a>
+                    <a href="#" onclick="changeLang('id', 'Bahasa Indonesia')"><img src="https://flagcdn.com/id.svg"
+                            class="flag"> Bahasa Indonesia</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner con Logo Grande -->
+    <header class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="Akko Text.png" alt="Akko" class="hero-logo-large"
+                onerror="this.src='https://via.placeholder.com/300x100/000000/ff33cc?text=Akko';">
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Panel de Perfil -->
+        <section class="profile-section glass-panel">
+            <div class="avatar-column">
+                <div class="avatar-wrapper">
+                    <img src="Avatar Akko.png" alt="Avatar Akko" class="avatar-img"
+                        onerror="this.src='https://via.placeholder.com/300x300/ff33cc/000000?text=Avatar';">
+                </div>
+            </div>
+
+            <div class="bio-column">
+                <p class="bio-text">
+                    Soy Akko, creador de contenido en <a href="https://www.youtube.com/@aakkoou?sub_confirmation=1 " target="_blank"
+                        class="highlight-link">YouTube</a>. En mi canal reacciono a vídeos, los analizo y comparto mi
+                    opinión sobre distintos temas.
+                </p>
+
+                <!-- Redes Sociales con Contadores Reales -->
+                <div class="social-links-grid">
+                    <a href="https://www.youtube.com/@aakkoou?sub_confirmation=1 " target="_blank" class="social-item yt-card">
+                        <i class="fab fa-youtube"></i>
+                        <span class="counter" data-target="117">0</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Título de Videos Separado -->
+        <h2 id="videos-section" class="videos-heading">Últimos vídeos publicados</h2>
+
+        <!-- Grilla de Vídeos (Live data vía JS) -->
+        <section class="videos-grid" id="videos-container">
+            <div class="video-skeleton"></div>
+            <div class="video-skeleton"></div>
+            <div class="video-skeleton"></div>
+            <div class="video-skeleton"></div>
+            <div class="video-skeleton"></div>
+            <div class="video-skeleton"></div>
+        </section>
+
+        <!-- Título Redes Sociales -->
+        <h2 id="social-section" class="videos-heading social-heading">Redes sociales</h2>
+
+        <!-- Nueva Sección de Redes Estilo Linktree (Abajo) -->
+        <section class="social-pills-container">
+            <div class="pill-row">
+                <a href="https://www.instagram.com/aakkooo_official" target="_blank" class="social-pill pill-insta">
+                    <i class="fab fa-instagram"></i>
+                    <span>insta</span>
+                    <i class="fas fa-check-circle verified-icon-blue"></i>
+                </a>
+                <a href="https://www.twitch.tv/aakkooo_" target="_blank" class="social-pill pill-twitch">
+                    <i class="fab fa-twitch"></i>
+                    <span>twitch</span>
+                    <i class="fas fa-check-circle verified-icon-purple"></i>
+                </a>
+                <a href="https://www.tiktok.com/@aakkoooo_" target="_blank" class="social-pill pill-tiktok">
+                    <svg viewBox="0 0 448 512" class="svg-pill-icon">
+                        <path
+                            d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                    </svg>
+                    <span>tiktok</span>
+                    <i class="fas fa-check-circle verified-icon-blue"></i>
+                </a>
+                <a href="https://www.youtube.com/@aakkoou?sub_confirmation=1 " target="_blank" class="social-pill pill-youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>youtube</span>
+                    <i class="fas fa-check-circle verified-icon-grey"></i>
+                </a>
+                <a href="https://discord.gg/MP5Qrawe75" target="_blank" class="social-pill pill-discord">
+                    <i class="fab fa-discord"></i>
+                    <span>discord</span>
+                    <i class="fas fa-check-circle verified-icon-blue"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/aakkooo_official" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@aakkoou?sub_confirmation=1 " target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@aakkoooo_" target="_blank"><svg viewBox="0 0 448 512" class="svg-icon-small">
+                    <path
+                        d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                </svg></a>
+        </div>
+
+        <p class="copyright">2026 Akko. All rights reserved.</p>
+        <p class="contact-msg"></p>
+    </footer>
+
+    <script src="stats.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
