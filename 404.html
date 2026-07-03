@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirigiendo...</title>
+<script>
+(function() {
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    var lastSegment = segments.pop() || '';
+    lastSegment = lastSegment.toLowerCase();
+
+    var redirects = {
+        'discord': 'https://discord.gg/MP5Qrawe75',
+        'youtube': 'https://www.youtube.com/@aakkoou?sub_confirmation=1',
+        'tiktok': 'https://www.tiktok.com/@aakkoooo_',
+        'instagram': 'https://www.instagram.com/aakkooo_official',
+        'twitch': 'https://www.twitch.tv/aakkooo_'
+    };
+
+    if (redirects[lastSegment]) {
+        window.location.replace(redirects[lastSegment]);
+    } else {
+        window.location.replace('/Akko-Web/');
+    }
+})();
+</script>
+</head>
+<body>
+<p>Redirigiendo...</p>
+</body>
+</html>
