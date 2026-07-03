@@ -183,4 +183,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Llamamos a la función que descarga dinámicamente los últimos vídeos
     setTimeout(() => { fetchVideos(); }, 500);
+
+    // Redirigir URLs tipo /discord, /youtube, etc. al link real de cada red social
+    const redirectMap = {
+        instagram: 'https://www.instagram.com/aakkooo_official',
+        twitch:    'https://www.twitch.tv/aakkooo_',
+        tiktok:    'https://www.tiktok.com/@aakkoooo_',
+        youtube:   'https://www.youtube.com/@aakkoou?sub_confirmation=1',
+        discord:   'https://discord.gg/MP5Qrawe75'
+    };
+
+    const slug = window.location.pathname.split('/').filter(Boolean).pop().toLowerCase();
+    if (slug && redirectMap[slug]) {
+        window.location.href = redirectMap[slug];
+    }
 });
