@@ -8,69 +8,66 @@
     const fetchRealStats = async (counters) => {
         try {
             const response = await fetch('stats.json?t=' + Date.now())
-            if (!response.ok) return
+            if (!response.ok) return null
             const data = await response.json()
             counters.forEach(counter => {
                 let network = ''
                 if (counter.parentElement.classList.contains('yt-card')) network = 'youtube'
                 if (data[network]) {
-                    const newTarget = data[network]
-                    counter.setAttribute('data-target', newTarget)
-                    counter.innerText = formatNumber(newTarget)
-                    counter.style.transition = 'text-shadow 0.3s'
-                    counter.style.textShadow = '0 0 10px var(--accent-pink)'
-                    setTimeout(() => { counter.style.textShadow = 'none' }, 600)
+                    counter.setAttribute('data-target', data[network])
                 }
             })
-        } catch (_) { }
+            return data
+        } catch (_) {
+            return null
+        }
     }
 
-    const initStats = () => {
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target')
+        const speed = 200
+        if (!counter.hasAttribute('data-current')) {
+            counter.setAttribute('data-current', '0')
+        }
+        const updateCount = () => {
+            const countRaw = parseFloat(counter.getAttribute('data-current'))
+            const inc = target / speed
+            if (countRaw < target) {
+                const newCount = countRaw + inc
+                counter.setAttribute('data-current', newCount)
+                if (newCount >= target) {
+                    counter.innerText = formatNumber(target)
+                } else {
+                    counter.innerText = formatNumber(Math.ceil(newCount))
+                    setTimeout(updateCount, 15)
+                }
+            } else {
+                counter.innerText = formatNumber(target)
+            }
+        }
+        updateCount()
+    }
+
+    const initStats = async () => {
         const counters = document.querySelectorAll('.counter')
         if (!counters.length) return
 
-        const speed = 200
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target')
-                if (!counter.hasAttribute('data-current')) {
-                    counter.setAttribute('data-current', '0')
-                }
-                const updateCount = () => {
-                    const countRaw = parseFloat(counter.getAttribute('data-current'))
-                    const inc = target / speed
-                    if (countRaw < target) {
-                        const newCount = countRaw + inc
-                        counter.setAttribute('data-current', newCount)
-                        if (newCount >= target) {
-                            counter.innerText = formatNumber(target)
-                        } else {
-                            counter.innerText = formatNumber(Math.ceil(newCount))
-                            setTimeout(updateCount, 15)
-                        }
-                    } else {
-                        counter.innerText = formatNumber(target)
-                    }
-                }
-                updateCount()
-            })
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters()
-                    observer.unobserve(entry.target)
-                }
-            })
-        }, { threshold: 0.3 })
+        const data = await fetchRealStats(counters)
 
         const statsContainer = document.querySelector('.social-links-grid')
-        if (statsContainer) observer.observe(statsContainer)
+        if (statsContainer) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(animateCounter)
+                        observer.unobserve(entry.target)
+                    }
+                })
+            }, { threshold: 0.3 })
+            observer.observe(statsContainer)
+        }
 
         setInterval(() => fetchRealStats(counters), 30000)
-        fetchRealStats(counters)
     }
 
     if (document.readyState === 'loading') {
