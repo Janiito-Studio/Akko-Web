@@ -648,6 +648,7 @@ html {
 
     .hero-pattern {
         background-size: 30px 30px;
+        background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
         animation: movePattern 30s linear infinite;
         opacity: 0.4;
     }
@@ -797,6 +798,7 @@ html {
 
     .hero-pattern {
         background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         animation: movePattern 40s linear infinite;
         opacity: 0.3;
     }
@@ -946,6 +948,7 @@ html {
 
     .hero-pattern {
         background-size: 15px 15px;
+        background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
         animation: movePattern 50s linear infinite;
         opacity: 0.2;
     }
