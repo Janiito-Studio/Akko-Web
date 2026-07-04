@@ -646,6 +646,12 @@ html {
         align-items: center;
     }
 
+    .hero-pattern {
+        background-size: 30px 30px;
+        animation: movePattern 30s linear infinite;
+        opacity: 0.4;
+    }
+
     .hero-logo-large {
         max-width: 250px;
     }
@@ -790,7 +796,9 @@ html {
     }
 
     .hero-pattern {
-        background-size: 40px 40px;
+        background-size: 20px 20px;
+        animation: movePattern 40s linear infinite;
+        opacity: 0.3;
     }
 
     .main-content {
@@ -934,6 +942,12 @@ html {
 
     .hero {
         height: 130px;
+    }
+
+    .hero-pattern {
+        background-size: 15px 15px;
+        animation: movePattern 50s linear infinite;
+        opacity: 0.2;
     }
 
     .hero-logo-large {
