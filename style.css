@@ -587,6 +587,7 @@ html {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 30px;
     }
 
     .videos-grid {
@@ -598,12 +599,381 @@ html {
     }
 }
 
-@media (max-width: 600px) {
-    .videos-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    .nav-logo {
+        height: 36px;
+    }
+
+    .nav-center {
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+
+    .language-badge {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+
+    .language-badge .flag {
+        width: 18px;
+        height: 12px;
+    }
+
+    .language-badge i {
+        display: none;
+    }
+
+    .dropdown-content {
+        right: -10px;
+        min-width: 120px;
+        max-height: 300px;
     }
 
     .hero {
-        height: 250px;
+        height: 200px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-logo-large {
+        max-width: 250px;
+    }
+
+    .main-content {
+        margin-top: -40px;
+        padding: 0 12px;
+    }
+
+    .glass-panel {
+        padding: 20px;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .avatar-column {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .videos-heading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .social-heading {
+        margin-top: 40px;
+    }
+
+    .videos-grid {
+        gap: 15px;
+    }
+
+    .social-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .social-item {
+        padding: 15px 8px;
+    }
+
+    .social-item i,
+    .social-item svg {
+        font-size: 1.6rem;
+        height: 28px;
+    }
+
+    .counter {
+        font-size: 1rem;
+    }
+
+    .social-pills-container {
+        margin: 25px auto;
+        gap: 10px;
+    }
+
+    .pill-row {
+        gap: 10px;
+    }
+
+    .social-pill {
+        padding: 10px 18px;
+        height: 50px;
+    }
+
+    .social-pill span {
+        font-size: 1.1rem;
+    }
+
+    .social-pill i, .svg-pill-icon {
+        font-size: 1.2rem;
+    }
+
+    .svg-pill-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .verified-icon-blue,
+    .verified-icon-purple,
+    .verified-icon-grey {
+        font-size: 1rem !important;
+    }
+
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .footer-socials {
+        gap: 20px;
+    }
+
+    .footer-socials i,
+    .svg-icon-small {
+        font-size: 1.2rem;
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+        height: 46px;
+    }
+
+    .nav-logo {
+        height: 30px;
+    }
+
+    .nav-link {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .nav-center {
+        gap: 5px;
+    }
+
+    .language-badge {
+        padding: 3px 8px;
+        font-size: 0.65rem;
+    }
+
+    .language-badge .flag {
+        width: 14px;
+        height: 10px;
+    }
+
+    .hero {
+        height: 160px;
+        padding: 15px;
+    }
+
+    .hero-logo-large {
+        max-width: 180px;
+    }
+
+    .hero-pattern {
+        background-size: 40px 40px;
+    }
+
+    .main-content {
+        margin-top: -30px;
+        padding: 0 10px;
+    }
+
+    .glass-panel {
+        padding: 16px;
+        gap: 20px;
+        border-radius: 14px;
+    }
+
+    .avatar-column {
+        max-width: 200px;
+    }
+
+    .avatar-wrapper {
+        padding: 4px;
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+        line-height: 1.6;
+    }
+
+    .videos-heading {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .social-heading {
+        margin-top: 30px;
+    }
+
+    .videos-grid {
+        gap: 10px;
+    }
+
+    .video-info {
+        padding: 10px;
+    }
+
+    .video-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .social-links-grid {
+        gap: 8px;
+    }
+
+    .social-item {
+        padding: 12px 6px;
+        border-radius: 12px;
+    }
+
+    .social-item i,
+    .social-item svg {
+        font-size: 1.3rem;
+        height: 22px;
+        margin-bottom: 6px;
+    }
+
+    .counter {
+        font-size: 0.85rem;
+    }
+
+    .social-pill {
+        padding: 8px 14px;
+        height: 44px;
+        border-radius: 40px;
+    }
+
+    .social-pill span {
+        font-size: 0.95rem;
+    }
+
+    .social-pill i, .svg-pill-icon {
+        font-size: 1rem;
+    }
+
+    .svg-pill-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .verified-icon-blue,
+    .verified-icon-purple,
+    .verified-icon-grey {
+        font-size: 0.85rem !important;
+    }
+
+    .pill-row {
+        gap: 8px;
+    }
+
+    .footer {
+        padding: 30px 10px;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .footer-socials i,
+    .svg-icon-small {
+        font-size: 1rem;
+        width: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0 8px;
+        height: 42px;
+    }
+
+    .nav-logo {
+        height: 26px;
+    }
+
+    .nav-link {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+
+    .nav-center {
+        gap: 4px;
+    }
+
+    .language-badge {
+        padding: 2px 6px;
+        font-size: 0.6rem;
+    }
+
+    .language-badge .flag {
+        width: 12px;
+        height: 9px;
+    }
+
+    .hero {
+        height: 130px;
+    }
+
+    .hero-logo-large {
+        max-width: 150px;
+    }
+
+    .main-content {
+        margin-top: -25px;
+        padding: 0 8px;
+    }
+
+    .glass-panel {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .avatar-column {
+        max-width: 160px;
+    }
+
+    .bio-text {
+        font-size: 0.8rem;
+        margin-bottom: 14px;
+    }
+
+    .videos-heading {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .social-item {
+        padding: 10px 4px;
+    }
+
+    .social-pill {
+        height: 40px;
+        padding: 6px 12px;
+    }
+
+    .social-pill span {
+        font-size: 0.85rem;
     }
 }
