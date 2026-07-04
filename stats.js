@@ -7,7 +7,7 @@
 
     const fetchRealStats = async (counters) => {
         try {
-            const response = await fetch('stats.json')
+            const response = await fetch('stats.json?t=' + Date.now())
             if (!response.ok) return
             const data = await response.json()
             counters.forEach(counter => {
